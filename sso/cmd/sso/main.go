@@ -5,6 +5,7 @@ import (
 	"log/slog"
 	"os"
 
+	"github.com/HironixRotifer/grpc-authorization-service/internal/app"
 	"github.com/HironixRotifer/grpc-authorization-service/internal/config"
 )
 
@@ -22,6 +23,8 @@ func main() {
 	log.Info("starting application")
 
 	//TODO: инициализация приложений
+	application := app.New(log, cfg.GRPC.Port, cfg.StoragePath, cfg.TokenTTL)
+	application.GRPCsrv.MustRun()
 
 	//TODO: запустить grpc
 }

@@ -53,7 +53,7 @@ func fetchConfigPath() string {
 	flag.Parse()
 
 	if res == "" {
-		res = os.Getenv("CONFIG_PATH")
+		res = os.Getenv("sso/config/local.yaml")
 	}
 
 	return res
