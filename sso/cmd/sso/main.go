@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"os/signal"
+	"syscall"
 
 	"github.com/HironixRotifer/grpc-authorization-service/internal/app"
 	"github.com/HironixRotifer/grpc-authorization-service/internal/config"
@@ -27,6 +29,17 @@ func main() {
 	application.GRPCsrv.MustRun()
 
 	//TODO: запустить grpc
+
+	// Graceful shutdown
+	stop := make(chan os.Signal, 1)
+	signal.Notify(stop, syscall.SIGTERM, syscall.SIGINT)
+
+	sn := <-stop
+	log.Info("shutting down application", slog.String("signal", sn.String()))
+
+	application.GRPCsrv.Stop()
+	log.Info("application is stopped")
+
 }
 
 func setupLogger(env string) *slog.Logger {

@@ -16,9 +16,9 @@ type App struct {
 }
 
 // Creates mew gRPC server app.
-func New(log *slog.Logger, port int) *App {
+func New(log *slog.Logger, port int, auth authgrpc.Auth) *App {
 	gRPCServer := grpc.NewServer()
-	authgrpc.Register(gRPCServer)
+	authgrpc.Register(gRPCServer, auth)
 	return &App{
 		log:        log,
 		gRPCServer: gRPCServer,
