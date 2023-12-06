@@ -2,56 +2,12 @@
 ## explicit; go 1.16
 github.com/BurntSushi/toml
 github.com/BurntSushi/toml/internal
-# github.com/cockroachdb/errors v1.11.1
-## explicit; go 1.19
-github.com/cockroachdb/errors
-github.com/cockroachdb/errors/assert
-github.com/cockroachdb/errors/barriers
-github.com/cockroachdb/errors/contexttags
-github.com/cockroachdb/errors/domains
-github.com/cockroachdb/errors/errbase
-github.com/cockroachdb/errors/errorspb
-github.com/cockroachdb/errors/errutil
-github.com/cockroachdb/errors/extgrpc
-github.com/cockroachdb/errors/grpc/status
-github.com/cockroachdb/errors/hintdetail
-github.com/cockroachdb/errors/issuelink
-github.com/cockroachdb/errors/join
-github.com/cockroachdb/errors/markers
-github.com/cockroachdb/errors/report
-github.com/cockroachdb/errors/safedetails
-github.com/cockroachdb/errors/secondary
-github.com/cockroachdb/errors/stdstrings
-github.com/cockroachdb/errors/telemetrykeys
-github.com/cockroachdb/errors/withstack
-# github.com/cockroachdb/logtags v0.0.0-20230118201751-21c54148d20b
-## explicit; go 1.16
-github.com/cockroachdb/logtags
-# github.com/cockroachdb/redact v1.1.5
-## explicit; go 1.14
-github.com/cockroachdb/redact
-github.com/cockroachdb/redact/builder
-github.com/cockroachdb/redact/interfaces
-github.com/cockroachdb/redact/internal/buffer
-github.com/cockroachdb/redact/internal/escape
-github.com/cockroachdb/redact/internal/fmtforward
-github.com/cockroachdb/redact/internal/markers
-github.com/cockroachdb/redact/internal/redact
-github.com/cockroachdb/redact/internal/rfmt
-github.com/cockroachdb/redact/internal/rfmt/fmtsort
 # github.com/gabriel-vasile/mimetype v1.4.2
 ## explicit; go 1.20
 github.com/gabriel-vasile/mimetype
 github.com/gabriel-vasile/mimetype/internal/charset
 github.com/gabriel-vasile/mimetype/internal/json
 github.com/gabriel-vasile/mimetype/internal/magic
-# github.com/getsentry/sentry-go v0.18.0
-## explicit; go 1.19
-github.com/getsentry/sentry-go
-github.com/getsentry/sentry-go/internal/debug
-github.com/getsentry/sentry-go/internal/otel/baggage
-github.com/getsentry/sentry-go/internal/otel/baggage/internal/baggage
-github.com/getsentry/sentry-go/internal/ratelimit
 # github.com/go-playground/locales v0.14.1
 ## explicit; go 1.17
 github.com/go-playground/locales
@@ -62,19 +18,6 @@ github.com/go-playground/universal-translator
 # github.com/go-playground/validator/v10 v10.16.0
 ## explicit; go 1.18
 github.com/go-playground/validator/v10
-# github.com/gogo/googleapis v1.4.1
-## explicit; go 1.12
-github.com/gogo/googleapis/google/rpc
-# github.com/gogo/protobuf v1.3.2
-## explicit; go 1.15
-github.com/gogo/protobuf/gogoproto
-github.com/gogo/protobuf/proto
-github.com/gogo/protobuf/protoc-gen-gogo/descriptor
-github.com/gogo/protobuf/sortkeys
-github.com/gogo/protobuf/types
-# github.com/gogo/status v1.1.0
-## explicit; go 1.12
-github.com/gogo/status
 # github.com/golang/protobuf v1.5.3
 ## explicit; go 1.9
 github.com/golang/protobuf/jsonpb
@@ -91,19 +34,9 @@ github.com/ilyakaznacheev/cleanenv
 github.com/joho/godotenv
 # github.com/kr/pretty v0.3.1
 ## explicit; go 1.12
-github.com/kr/pretty
-# github.com/kr/text v0.2.0
-## explicit
-github.com/kr/text
 # github.com/leodido/go-urn v1.2.4
 ## explicit; go 1.16
 github.com/leodido/go-urn
-# github.com/pkg/errors v0.9.1
-## explicit
-github.com/pkg/errors
-# github.com/rogpeppe/go-internal v1.9.0
-## explicit; go 1.17
-github.com/rogpeppe/go-internal/fmtsort
 # golang.org/x/crypto v0.16.0
 ## explicit; go 1.18
 golang.org/x/crypto/bcrypt
@@ -122,12 +55,9 @@ golang.org/x/net/trace
 # golang.org/x/sys v0.15.0
 ## explicit; go 1.18
 golang.org/x/sys/cpu
-golang.org/x/sys/execabs
 golang.org/x/sys/unix
 # golang.org/x/text v0.14.0
 ## explicit; go 1.18
-golang.org/x/text/cases
-golang.org/x/text/internal
 golang.org/x/text/internal/language
 golang.org/x/text/internal/language/compact
 golang.org/x/text/internal/tag
@@ -224,6 +154,8 @@ google.golang.org/protobuf/types/descriptorpb
 google.golang.org/protobuf/types/known/anypb
 google.golang.org/protobuf/types/known/durationpb
 google.golang.org/protobuf/types/known/timestamppb
+# gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
+## explicit; go 1.11
 # gopkg.in/yaml.v3 v3.0.1
 ## explicit
 gopkg.in/yaml.v3

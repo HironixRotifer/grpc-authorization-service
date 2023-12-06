@@ -2,12 +2,10 @@ package auth
 
 import (
 	"context"
-	"log"
 	"log/slog"
 	ssov1 "proto/gen/go/sso"
 
 	"github.com/go-playground/validator/v10"
-	"golang.org/x/crypto/bcrypt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -34,26 +32,6 @@ type serverAPI struct {
 
 func Register(gRPC *grpc.Server, auth Auth) {
 	ssov1.RegisterAuthServer(gRPC, &serverAPI{auth: auth})
-}
-
-// HashPassword take password string and return hash
-func HashPassword(password string) string {
-	bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14)
-	if err != nil {
-		log.Panic(err)
-	}
-	return string(bytes)
-}
-
-// VerefiPassword
-func VerefiPassword(userPassword string, givenPassword string) (valid bool, msg string) {
-	err := bcrypt.CompareHashAndPassword([]byte(givenPassword), []byte(userPassword))
-	valid = true
-
-	if err != nil {
-		msg = "Login or password is incorrect"
-	}
-	return valid, msg
 }
 
 func (s *serverAPI) Login(ctx context.Context, req *ssov1.LoginRequest) (*ssov1.LoginResponse, error) {
